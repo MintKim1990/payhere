@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-  # Spring Boot 애플리케이션 서비스 정의
   springboot-app:
     build:
       context: .
@@ -9,3 +8,19 @@ services:
     container_name: springboot-app
     ports:
       - "8080:8080"
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    environment:
+      # 패스워드같은 민감정보는 별도 파일로 마운트하여 사용할 수 있지만 해당 사전과제에서는 별도 마운트 한 서버를 제출할 수 없기에 암호화하지 않았습니다.
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: payhere
+    ports:
+      - "3306:3306"
+
+  redis:
+    image: redis:7.0
+    container_name: redis
+    ports:
+      - 6379:6379
