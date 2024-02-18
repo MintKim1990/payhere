@@ -28,6 +28,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-redis")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("mysql:mysql-connector-java:8.0.27")
 
 
 	compileOnly("io.jsonwebtoken:jjwt-api:0.11.2")
@@ -43,7 +44,7 @@ dependencies {
 	testImplementation("io.kotest.extensions:kotest-extensions-spring:1.1.2")
 	testImplementation("com.ninja-squad:springmockk:4.0.2")
 	testImplementation("io.kotest:kotest-runner-junit5:5.4.2")
-//	testImplementation("it.ozimov:embedded-redis:0.7.2")
+	testImplementation("it.ozimov:embedded-redis:0.7.2")
 }
 
 tasks.withType<KotlinCompile> {

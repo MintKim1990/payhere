@@ -11,11 +11,11 @@ import org.springframework.boot.test.context.SpringBootTest
 
 class SellerTest : StringSpec({
 
-    "휴대폰 번호에 숫자가 아닌 문자가 들어있을 경우 판매자 생성에 실패한다.." {
+    "휴대폰 번호에 숫자가 아닌 문자가 들어있을 경우 판매자 생성에 실패한다." {
         shouldThrow<NotAvailablePhoneNumberException> { createSeller(phoneNumber = "aaaaaaaaaaa") }
     }
 
-    "휴대폰 번호에 숫자가 아닌 특수문자가 들어있을 경우 판매자 생성에 실패한다.." {
+    "휴대폰 번호에 숫자가 아닌 특수문자가 들어있을 경우 판매자 생성에 실패한다." {
         shouldThrow<NotAvailablePhoneNumberException> { createSeller(phoneNumber = "000-000-000") }
     }
 

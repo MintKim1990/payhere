@@ -29,4 +29,4 @@ WORKDIR /app
 COPY --from=builder /app/build/libs/*.jar ./app.jar
 
 # 애플리케이션 실행
-CMD ["java", "-jar", "app.jar"]
+CMD ["java", "-jar", "app.jar", "--spring.profiles.active=local"]

@@ -13,7 +13,7 @@ class Seller(
     @Embedded
     val password: Password,
 
-    ) : BaseEntity() {
+) : BaseEntity() {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
