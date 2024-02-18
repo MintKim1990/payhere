@@ -30,7 +30,7 @@ data class ProductCreateRequest(
     @field:NotBlank(message = "바코드정보는 필수입니다.")
     val barcode: String,
 
-    @field:NotNull(message = "유통기한 시작일자는 필수입니다.")
+    @field:NotNull(message = "유통기한은 필수입니다.")
     var expirationDate: LocalDate,
 
     @field:NotNull(message = "사이즈는 필수입니다.")
@@ -75,7 +75,7 @@ data class ProductUpdateRequest(
     @field:NotBlank(message = "바코드정보는 필수입니다.")
     val barcode: String,
 
-    @field:NotNull(message = "유통기한 시작일자는 필수입니다.")
+    @field:NotNull(message = "유통기한은 필수입니다.")
     var expirationDate: LocalDate,
 
     @field:NotNull(message = "사이즈는 필수입니다.")
