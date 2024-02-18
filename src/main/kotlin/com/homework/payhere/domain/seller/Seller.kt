@@ -4,6 +4,11 @@ import com.homework.payhere.domain.BaseEntity
 import com.homework.payhere.utils.exception.LoginFailException
 import jakarta.persistence.*
 
+@Table(
+    uniqueConstraints = [
+        UniqueConstraint(name = "seller_uk_phone_number", columnNames = ["phone_number"])
+    ]
+)
 @Entity
 class Seller(
 

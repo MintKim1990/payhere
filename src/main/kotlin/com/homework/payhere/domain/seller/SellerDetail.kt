@@ -9,7 +9,7 @@ class SellerDetail(
     phoneNumber: String
 ) {
 
-    @Column(name = "phone_number", nullable = false, unique = true, length = 11)
+    @Column(name = "phone_number", nullable = false, length = 11)
     var phoneNumber: String = validatePhoneNumber(phoneNumber)
         private set
 

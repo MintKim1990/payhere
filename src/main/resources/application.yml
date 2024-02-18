@@ -23,8 +23,6 @@ spring:
 
 logging:
   level:
-    com.zaxxer.hikari.HikariConfig: DEBUG
-    com.zaxxer.hikari.pool.HikariPool: DEBUG
     org.hibernate.orm.jdbc.bind: trace
 
 ---

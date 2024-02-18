@@ -8,7 +8,10 @@ import java.time.LocalDate
 
 @Table(
     indexes = [
-        Index(name = "index_seller", columnList = "sellerId")
+        Index(name = "product_index_seller", columnList = "sellerId")
+    ],
+    uniqueConstraints = [
+        UniqueConstraint(name = "product_uk_barcode", columnNames = ["barcode"])
     ]
 )
 @Entity
@@ -30,7 +33,7 @@ class Product(
     @Lob
     var description: String,
 
-    @Column(name = "barcode", nullable = false, unique = true)
+    @Column(name = "barcode", nullable = false)
     var barcode: String,
 
     @Column(name = "expiration_date", nullable = false)
