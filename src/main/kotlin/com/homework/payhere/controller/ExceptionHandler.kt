@@ -37,7 +37,7 @@ class ExceptionHandler : ResponseEntityExceptionHandler() {
     @ExceptionHandler(Exception::class)
     fun exceptionHandler(exception: Exception): ResponseEntity<Response<Unit>> {
         logger.error("Exception", exception)
-        return ResponseEntity.status(SERVICE_UNAVAILABLE).body(Response(SERVICE_UNAVAILABLE, exception.message))
+        return ResponseEntity.status(SERVICE_UNAVAILABLE).body(Response(SERVICE_UNAVAILABLE, "시스템 에러가 발생했습니다."))
     }
 
     @ExceptionHandler(IllegalStateException::class)
